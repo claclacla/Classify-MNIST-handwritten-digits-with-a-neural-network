@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  jupyter-notebook:
+    build: ./dev
+    image: claclacla/jupiter-notebook
+    container_name: JupiterNotebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - "${APP_FOLDER}:/usr/src/app"
